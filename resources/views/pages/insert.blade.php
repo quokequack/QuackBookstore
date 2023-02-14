@@ -1,14 +1,9 @@
 
 <title>Quack Bookstore | Insert a book!</title>
-<style>
-    .form-box{
- 
-    }
-</style>
 @extends("layouts.master")
 
 @section("title")
-<h3>Insert a new book with the form below:</h3><br/>
+Insert a new book with the form below:
 @endsection
 @section('content')
 <div class='form-box'>
@@ -26,7 +21,7 @@
     <input type='text' class='form-control' name='price' id='price'><br/>
     <label for='storage'>Storage:</label><br/>
     <input type='number' class='form-control' name='storage' id='storage'><br/>
-    <button type='submit' class='form-control' value='insert'>Insert!</button><br/>
+    <button type='submit' class='form-control' id='btn' value='insert'>Insert!</button><br/>
 </form>
 </div>
 @endsection

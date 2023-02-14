@@ -6,47 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <meta name='author' content='Alaquoke'>
-    <style>
-        .container{
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-        }
-        .main{
-            margin-top:5%;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            font-family:'Poppins';
-        }
-        .footer{
-            display:flex;
-            justify-content:center;
-            text-align:center;
-            flex:1;
-        }
-        .list{
-            margin-top:5%;
-        }
-        .title{
-            display:flex;
-            justify-content:center;
-            align-items:Center;
-            margin-top:5%;
-        }
-    </style>
+    <link rel='stylesheet' href='/styles/styles.css'>
     <title>Layout</title>
     @include("partials.styles")
 </head>
-<body>
+<body class='body'>
     @include("partials.header")
     <div class='title'>
         @yield('title')
     </div>
     <div class='container'>
         <main class='main'>
-            @yield("content")
+            <div class='row'>
+                @if(session("msg"))
+                <p class='msg'>{{session('msg')}}</p>
+                @endif
+                @yield("content")
+            </div>
         </main>
         <div class='list'>
             @yield('list')

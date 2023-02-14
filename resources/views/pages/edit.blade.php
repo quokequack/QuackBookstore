@@ -3,7 +3,7 @@
 @extends("layouts.master")
 
 @section('title')
-<h3>Edit {{$book->name}}</h3>
+Edit {{$book->name}}
 @endsection
 
 @section('content')
@@ -21,7 +21,7 @@
         <input type='text' class='form-control' name='price' id='price' value='{{$book->price}}'><br/>
         <label for='storage'>Storage:</label><br/>
         <input type='number' class='form-control' name='storage' id='storage' value='{{$book->storage}}'><br/>
-        <button type='submit' class='form-control' value='update'>Update!</button><br/>
+        <button type='submit' id='update-btn'class='form-control' value='update'>Update!</button><br/>
     </form>
     </div>
 @endsection
